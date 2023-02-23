@@ -11,6 +11,10 @@
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
 }
+html {
+  color-scheme: dark light;
+  scroll-behavior: smooth;
+}
 body.dark {
   --bg-black-900: #151515;
   --bg-black-100: #222222;
@@ -23,6 +27,7 @@ body {
   line-height: 1.5;
   font-size: 1rem;
   font-family: "Rubik";
+  scroll-behavior: smooth;
 }
 
 * {
@@ -550,8 +555,13 @@ h3.my_profession {
   padding: 20px 0;
   border-radius: 10px;
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.portfolio .portfolio_item .portfolio_item_inner:hover {
+  border: 2px solid var(--skin-color);
 }
 .portfolio .portfolio_item .portfolio_item_inner h4 {
   font-size: 1.8rem;
